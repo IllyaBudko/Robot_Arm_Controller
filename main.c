@@ -1,12 +1,7 @@
-#include <stdint.h>
-#include <stdlib.h>
-#include "stm32f411xe.h"
-
-#define DELAY_VALUE   500000U
+#include "main.h"
 
 int main()
 {
-  //Empty main for now
+  System_Clock_Config();
 }
-
 
