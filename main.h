@@ -1,10 +1,3 @@
-#ifndef _MAIN_H_
-#define _MAIN_H_
-
-#include <stdint.h>
-#include <stdlib.h>
-#include "stm32f411xe.h"
-
 /*Function header template*/
 
 /**
@@ -15,6 +8,16 @@
   *          @arg @ref Values 
   * @retval Return value description
   */
+
+#ifndef _MAIN_H_
+#define _MAIN_H_
+
+#include <stdint.h>
+#include <stdlib.h>
+
+#include "stm32f411xe.h"
+
+#include "system.h"
 
 
 

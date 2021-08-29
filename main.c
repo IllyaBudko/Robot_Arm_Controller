@@ -4,6 +4,6 @@
 
 int main()
 {
-  //Empty main for now
+  System_Clock_Config();
 }
 
