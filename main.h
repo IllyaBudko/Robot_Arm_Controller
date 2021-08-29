@@ -2,10 +2,12 @@
 
 /**
   * @brief  Brief description of function
+  *
   * @param  Parameter description
   * @param  Parameter description with acceptable parameter values 
   *         This parameter can be one of the following values:
-  *          @arg @ref Values 
+  *         @arg @ref Values 
+  *
   * @retval Return value description
   */
 
@@ -18,6 +20,7 @@
 #include "stm32f411xe.h"
 
 #include "system.h"
+#include "stepper_driver.h"
 
 
 

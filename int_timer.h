@@ -5,4 +5,6 @@
 #ifndef _INT_TIMER_H_
 #define _INT_TIMER_H_
 
+#include <stdint.h>
+
 #endif /*_INT_TIMER_H_*/
