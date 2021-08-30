@@ -6,6 +6,12 @@
 
 !.gitignore
 
+#python stuff here
+!/Users/illyabudko/Documents/Robot_Arm_Controller/Robot_Arm_Controller/py_stuff/**
+
+!angle_calculator.py
+
+#c stuff here
 !main.h
 !main.c
 
