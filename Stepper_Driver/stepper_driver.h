@@ -7,9 +7,6 @@
 
 #include <stdint.h>
 
-#include "low_timer.h"
-#include "int_timer.h"
-
 /*
   Stepper motor timebase defines for use with
   void stepper_driver_timebase_update(uint8_t stepperTimeBase)

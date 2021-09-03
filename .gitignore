@@ -18,6 +18,8 @@
 !system.h
 !system.c
 
+!\Embedded\Serious_WorkSpace\Robot_Arm_Controller_Project\Stepper_Driver\
+
 #Stepper Driver files
 !stepper_driver.h
 !stepper_driver.c
