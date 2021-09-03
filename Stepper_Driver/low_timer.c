@@ -2,6 +2,8 @@
   Low level functions for use with timer peripherals, not for use in application code
 */
 
+#include "low_timer.h"
+
 /**
   * @brief  TIM2 timer base frequency configuration
   *
