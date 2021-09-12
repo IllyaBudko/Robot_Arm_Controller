@@ -7,22 +7,14 @@
 
 #include <stdint.h>
 
-/*
-  Stepper motor timebase defines for use with
-  void stepper_driver_timebase_update(uint8_t stepperTimeBase)
-*/
-#define TIMEBASE_1uS    1U
-#define TIMEBASE_10uS   10U
-#define TIMEBASE_100uS  100U
-#define TIMEBASE_1mS    1000U
+#include "stm32f411xe.h"
 
 struct Stepper{
   
 };
 
 void stepper_driver_init(void);
-void stepper_driver_timebase_update(uint8_t stepperTimeBase);
-
+void stepper_driver_run(void);
 void stepper_motor_config(struct Stepper * joint, uint32_t maxSpeed, uint32_t minSpeed);
 
 #endif /*_STEPPER_DRIVER_H_*/

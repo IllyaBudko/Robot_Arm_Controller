@@ -26,6 +26,3 @@
 
 !low_timer.h
 !low_timer.c
-
-!int_timer.h
-!int_timer.c
