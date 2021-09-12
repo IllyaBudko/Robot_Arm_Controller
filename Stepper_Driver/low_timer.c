@@ -85,7 +85,7 @@ void TIM2_IRQHandler(void)
 {
   
   TIM2->CR1 &= ~(1 << 0);
-  while(TIM2->SR & TIM_SR_CC1IF || TIM2->SR & TIM_SR_CC2IF || TIM2->SR & TIM_SR_CC3IF || TIM2->SR & TIM_SR_CC4IF)
+  do
   {
     if(TIM2->SR & TIM_SR_CC1IF)
     {
@@ -97,7 +97,12 @@ void TIM2_IRQHandler(void)
       
       GPIOA->ODR |= (0x01 << 0);
       GPIOA->ODR &= ~(0x01 << 0);
-      tmp = temp + ((2 * temp) / (4 * counter + 1));
+      tmp = ((2 * temp) / (4 * counter + 1));
+      if(tmp < 10000)
+      {
+        tmp = 10000;
+      }
+      tmp = temp + tmp;
       TIM2->CCR1 = tmp;
       counter++;
     }
@@ -144,6 +149,7 @@ void TIM2_IRQHandler(void)
       counter++;
     }
   }
+  while(TIM2->SR & TIM_SR_CC1IF || TIM2->SR & TIM_SR_CC2IF || TIM2->SR & TIM_SR_CC3IF || TIM2->SR & TIM_SR_CC4IF);
   NVIC_ClearPendingIRQ(TIM2_IRQn);
   TIM2->CR1 |= (1 << 0);
 }
