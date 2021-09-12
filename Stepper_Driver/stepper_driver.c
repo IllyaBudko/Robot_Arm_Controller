@@ -16,6 +16,7 @@
 void stepper_driver_init(void)
 {
   ll_timer_tickrate_config();
+  ll_timer_channel_config();
 }
 
 /**
@@ -28,6 +29,7 @@ void stepper_driver_init(void)
 void stepper_driver_run(void)
 {
   TIM2->CR1 |= (1 << 0);
+  TIM2->EGR |= (1 << 0);
 }
 
 /**
