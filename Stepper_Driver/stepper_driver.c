@@ -5,32 +5,32 @@
 #include "stepper_driver.h"
 
 #include "low_timer.h"
-#include "int_timer.h"
 
 /**
-  * @brief  
-  *
-  * @param  Parameter description
+  * @brief  Stepper motor initialization of low level peripherals
   *
   * @param  None
   *
   * @retval None
   */
-void stepper_driver_init(void);
+void stepper_driver_init(void)
+{
+  ll_timer_tickrate_config();
+  ll_timer_channel_config();
+}
 
 /**
-  * @brief  TIM2 update timer timebase from default value
+  * @brief  Stepper motor peripheral run enable
   *
-  * @param  Parameter description with acceptable parameter values 
-  *         This parameter can be one of the following values:
-  *         @arg @ref TIMEBASE_1uS           
-  *         @arg @ref TIMEBASE_10uS 
-  *         @arg @ref TIMEBASE_100uS
-  *         @arg @ref TIMEBASE_1mS  
+  * @param  None
   *
   * @retval None
   */
-void stepper_driver_timebase_update(uint8_t stepperTimeBase);
+void stepper_driver_run(void)
+{
+  TIM2->CR1 |= (1 << 0);
+  TIM2->EGR |= (1 << 0);
+}
 
 /**
   * @brief  Stepper motor parameter and variables initialization

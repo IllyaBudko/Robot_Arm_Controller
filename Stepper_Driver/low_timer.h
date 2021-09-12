@@ -7,6 +7,8 @@
 
 #include <stdint.h>
 
+#include "stm32f411xe.h"
+
 void ll_timer_tickrate_config(void);
 void ll_timer_channel_config(void);
 
